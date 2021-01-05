@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Bree+Serif&family=Montserrat&family=PT+Sans&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+footer {
+  background-color: #193245;
+}
+
+footer ul {
+  list-style-type: none;
+  color: #858585;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  font-size: small;
+}
+
+footer ul h6 {
+  color: #7da2e1 !important;
+}
+
+.navbar {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: medium;
+  flex-direction: column;
+}
+nav .upper-menu {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.navbar-nav {
+  text-transform: uppercase;
+}
+.flash {
+  display: flex;
+  background-color: #3d73e4;
+  color: #fff;
+  flex-direction: column;
+  margin: 0;
+}
+.header {
+  font-family: "Kanit", sans-serif;
+  padding: 1rem;
+  text-align: center;
+}
+.app-link {
+  margin: 1rem 1rem;
+}
+.head-detail {
+  padding: 1rem;
+  font-family: "PT Sans", sans-serif;
+  padding-right: 3rem;
+  text-align: justify;
+  color: #e3e8e9;
+}
+.learn {
+  background: #fff;
+  position: relative;
+}
+.learn h1 {
+  position: absolute;
+  top: -1.8rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: #fff;
+}
+.learn hr {
+  margin-top: 4rem;
+}
+.learn ul {
+  width: 60%;
+  margin: 2rem auto;
+}
+
+.download-app {
+  padding-left: 2.5rem;
+}
+
+.download-app h3 {
+  color: #e3e8e9;
+}
+
+.social-icons {
+  margin: auto;
+}
+
+.social-icons h5 {
+  color: #7da2e1;
+  font-family: "Montserrat", sans-serif;
+}
+
+.icons {
+  margin: auto;
+  padding-left: 2.8rem;
+}
+
+.icons i {
+  padding-right: 0.5rem;
+}
+footer li a {
+  text-decoration: none;
+  color: #858585;
+}
+footer li a:hover {
+  color: #858585;
+}
+@media (max-width: 768px) {
+  .download-app {
+    width: 100%;
+    text-align: center;
+  }
+  .header h1 {
+    font-size: 2rem;
+    word-wrap: normal;
+  }
+  .head-detail p {
+    padding: 1rem;
+  }
+  .learn ul {
+    width: 100%;
+    margin: 0.5rem auto;
+    margin-top: 4.5rem;
+  }
+  #top-bar {
+    display: none !important;
+  }
+}
+
+/* CardSlides style */
+@media (min-width: 768px) {
+  /* show 4 items */
+  .cardSlides .carousel-inner .active,
+  .cardSlides .carousel-inner .active + .carousel-item,
+  .cardSlides .carousel-inner .active + .carousel-item + .carousel-item,
+  .cardSlides
+    .carousel-inner
+    .active
+    + .carousel-item
+    + .carousel-item
+    + .carousel-item {
+    display: block;
+  }
+
+  .cardSlides
+    .carousel-inner
+    .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+  .cardSlides
+    .carousel-inner
+    .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)
+    + .carousel-item,
+  .cardSlides
+    .carousel-inner
+    .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)
+    + .carousel-item
+    + .carousel-item,
+  .cardSlides
+    .carousel-inner
+    .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)
+    + .carousel-item
+    + .carousel-item
+    + .carousel-item {
+    transition: none;
+  }
+
+  .cardSlides .carousel-inner .carousel-item-next,
+  .cardSlides .carousel-inner .carousel-item-prev {
+    position: relative;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .cardSlides
+    .carousel-inner
+    .active.carousel-item
+    + .carousel-item
+    + .carousel-item
+    + .carousel-item
+    + .carousel-item {
+    position: absolute;
+    top: 0;
+    right: -25%;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  /* left or forward direction */
+  .cardSlides
+    .active.carousel-item-left
+    + .carousel-item-next.carousel-item-left,
+  .cardSlides .carousel-item-next.carousel-item-left + .carousel-item,
+  .cardSlides
+    .carousel-item-next.carousel-item-left
+    + .carousel-item
+    + .carousel-item,
+  .cardSlides
+    .carousel-item-next.carousel-item-left
+    + .carousel-item
+    + .carousel-item
+    + .carousel-item,
+  .cardSlides
+    .carousel-item-next.carousel-item-left
+    + .carousel-item
+    + .carousel-item
+    + .carousel-item
+    + .carousel-item {
+    position: relative;
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  /* farthest right hidden item must be absolue position for animations */
+  .cardSlides .carousel-inner .carousel-item-prev.carousel-item-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  /* right or prev direction */
+  .cardSlides
+    .active.carousel-item-right
+    + .carousel-item-prev.carousel-item-right,
+  .cardSlides .carousel-item-prev.carousel-item-right + .carousel-item,
+  .cardSlides
+    .carousel-item-prev.carousel-item-right
+    + .carousel-item
+    + .carousel-item,
+  .cardSlides
+    .carousel-item-prev.carousel-item-right
+    + .carousel-item
+    + .carousel-item
+    + .carousel-item,
+  .cardSlides
+    .carousel-item-prev.carousel-item-right
+    + .carousel-item
+    + .carousel-item
+    + .carousel-item
+    + .carousel-item {
+    position: relative;
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+    display: block;
+    visibility: visible;
+  }
+}
+.cardSlides {
+  background-color: #eee;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(80, 79, 79, 0.411);
+}
+.carousel-control-prev {
+  justify-content: flex-start !important;
+}
+.carousel-control-next {
+  justify-content: flex-end !important;
+}
